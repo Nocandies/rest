@@ -25,7 +25,6 @@ public class dataBase {
         //MySQL配置时的密码
         String password = "";
 
-
         //遍历查询结果集
         try {
             //加载驱动程序
