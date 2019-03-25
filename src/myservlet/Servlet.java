@@ -1,0 +1,22 @@
+package myservlet;
+
+import com.dbc.dataBase;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+
+@WebServlet("/aaaa.do")
+public class Servlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String name = request.getParameter("name");
+        String pwd = request.getParameter("pwd");
+        System.out.println(name + ":" + pwd);
+//        dataBase.consql();
+        response.sendRedirect("tabtest/ttest.jsp");
+    }
+}
