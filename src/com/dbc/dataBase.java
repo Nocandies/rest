@@ -45,7 +45,6 @@ public class dataBase {
             System.out.println("-----------------");
             System.out.println("id" + "\t" + "姓名"+"\t" + "密码");
             System.out.println("-----------------");
-
 //            String id = null;
 //            String name = null;
 //            String pwd = null;
