@@ -33,4 +33,10 @@ public class foodbean {
         this.sold = sold;
         this.status = status;
     }
+
+    public foodbean(String fname, String ftype, double price) {
+        this.fname = fname;
+        this.ftype = ftype;
+        this.price = price;
+    }
 }

@@ -18,18 +18,27 @@ public class Servlet extends HttpServlet {
         String id = request.getParameter("id");
         String pwd = request.getParameter("pwd");
         System.out.println(id + ":" + pwd);
-//        dataBase.consql();
-
+//        dataBase.csql();
+        boolean sw=false;
         //验证
         dataBase dao=new dataBase();
-        List<userbean> list =dao.consql();
-        for(userbean tl:list){
-            if(Integer.parseInt(id)==tl.getUid() && pwd.equals(tl.getPwd())){
-                response.sendRedirect("tabtest/ttest.jsp");
+        try{
+            List<userbean> list =dao.usersql();
+            for(userbean tl:list){
+                if(Integer.parseInt(id)==tl.getUid() && pwd.equals(tl.getPwd())){
+                    sw =true;
+                }
+//                    response.sendRedirect("index.jsp");
             }
-            else{
+            if(sw){
+                response.sendRedirect("tabtest/ttest.jsp");
+                sw = false;
+            }else {
                 response.sendRedirect("index.jsp");
             }
+        }catch (Exception e){
+
         }
+
     }
 }

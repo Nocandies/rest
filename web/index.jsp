@@ -20,12 +20,14 @@
 
   <link rel="stylesheet" media="screen" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+
+
 </head>
 <body>
 <div id="particles-js">
   <div class="login">
     <div class='login_fields'>
-      <form  action="aaaa.do" method="post" onsubmit="return sub();">
+      <form  action="aaaa.do" method="post" >
         <div class='login_fields__user'>
           <div class='icon'>
             <i class="fa fa-user-o fa-2x" aria-hidden="true"></i>

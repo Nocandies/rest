@@ -1,6 +1,7 @@
 <%@ page import="com.dbc.dataBase" %>
 <%@ page import="com.JBean.userbean" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="com.JBean.foodbean" %><%--
   Created by IntelliJ IDEA.
   User: cl
   Date: 19-3-11
@@ -33,7 +34,7 @@
         <%--</tr>--%>
         <%--<%--%>
             <%--dataBase dao=new dataBase();--%>
-            <%--List<userbean> list =dao.consql();--%>
+            <%--List<userbean> list =dao.csql();--%>
             <%--for(userbean tl:list)--%>
             <%--{%>--%>
         <%--<tr>--%>
@@ -100,29 +101,23 @@
                 <li>
                     <h2 class="obtain">点餐<i></i></h2>
                     <div class="secondary">
-                        <h3>总菜谱</h3>
                         <h3>湘菜</h3>
                         <h3>川菜</h3>
                         <h3>粤菜</h3>
                         <h3>闽菜</h3>
                         <h3>苏菜</h3>
                         <h3>浙菜</h3>
-                        <h3>徽菜</h3>
-                        <h3>鲁菜</h3>
                     </div>
                 </li>
                 <li>
                     <h2 class="obtain">外卖<i></i></h2>
                     <div class="secondary">
-                        <h3>总菜谱</h3>
                         <h3>湘菜</h3>
                         <h3>川菜</h3>
                         <h3>粤菜</h3>
                         <h3>闽菜</h3>
                         <h3>苏菜</h3>
                         <h3>浙菜</h3>
-                        <h3>徽菜</h3>
-                        <h3>鲁菜</h3>
                     </div>
                 </li>
                 <li>
@@ -154,10 +149,10 @@
         <div class="table1">
             <table border="1">
                 <tr>
-                    <th>用户ID</th>
-                    <th>姓名</th>
-                    <th>密码</th>
-                    <th>用户类型</th>
+                    <th>菜名</th>
+                    <th>类型</th>
+                    <th>价格</th>
+                    <%--<th>用户类型</th>--%>
                     <%--<td>uid</td>--%>
                     <%--<td>uname</td>--%>
                     <%--<td>pwd</td>--%>
@@ -165,14 +160,14 @@
                 </tr>
                 <%
                     dataBase dao=new dataBase();
-                    List<userbean> list =dao.consql();
-                    for(userbean tl:list)
+                    List<foodbean> list =dao.foodsql();
+                    for(foodbean tl:list)
                     {%>
                 <tr>
-                    <td><%=tl.getUid() %></td>
-                    <td><%=tl.getUname() %></td>
-                    <td><%=tl.getPwd() %></td>
-                    <td><%=tl.getUtype() %></td>
+                    <td><%=tl.getFname() %></td>
+                    <td><%=tl.getFtype() %></td>
+                    <td><%=tl.getPrice() %></td>
+                    <%--<td><%=tl.getUtype() %></td>--%>
                 </tr>
                 <%}
                 %>
