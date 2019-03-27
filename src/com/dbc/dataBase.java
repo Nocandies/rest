@@ -1,7 +1,7 @@
 package com.dbc;
 
 
-import com.JBean.restbean;
+import com.JBean.userbean;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,8 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class dataBase {
-    public List<restbean> consql() {
-        List<restbean> list =new ArrayList<restbean>();
+    public List<userbean> consql() {
+        List<userbean> list =new ArrayList<userbean>();
         //声明Connection对象
         Connection con;
         //驱动程序名
@@ -42,7 +42,7 @@ public class dataBase {
             System.out.println("-----------------");
             System.out.println("执行结果如下所示:");
             System.out.println("-----------------");
-            System.out.println("id" + "\t" + "姓名"+"\t" + "密码");
+            System.out.println("id" + "\t" + "姓名"+"\t" + "密码"+"\t"+"用户类型");
             System.out.println("-----------------");
 //            String id = null;
 //            String name = null;
@@ -50,9 +50,9 @@ public class dataBase {
             while(rs.next()){
                 //获取stuname这列数据
 //
-                restbean rb =new restbean(Integer.parseInt(rs.getString("id")),rs.getString("name"),rs.getString("pwd"));
-                list.add(rb);
-                System.out.println(rb.getNum() + "\t" + rb.getName() + "\t"+rb.getPwd());
+                userbean ub =new userbean(Integer.parseInt(rs.getString("uid")),rs.getString("uname"),rs.getString("pwd"),Integer.parseInt(rs.getString("utype")));
+                list.add(ub);
+                System.out.println(ub.getUid() + "\t" + ub.getUname() + "\t"+ub.getPwd()+"\t"+ub.getUtype());
             }
             rs.close();
             con.close();

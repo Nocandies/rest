@@ -31,7 +31,7 @@
             <i class="fa fa-user-o fa-2x" aria-hidden="true"></i>
           </div>
           <input
-                  name="name"
+                  name="id"
                   placeholder='用户名'
                   maxlength="16"
                   type='text'

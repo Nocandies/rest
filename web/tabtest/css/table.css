@@ -1,0 +1,23 @@
+#table {
+height: 100%;
+width: 100%;
+background-color: bisque;
+}
+#realtable {
+    position: absolute;
+    top: 30%;
+    right:30%;
+    height:50%;
+    width: 30%;
+    background-color: #666;
+}
+
+#tableself {
+    text-align: center;
+    
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
