@@ -27,6 +27,9 @@ public class Servlet extends HttpServlet {
             if(Integer.parseInt(id)==tl.getUid() && pwd.equals(tl.getPwd())){
                 response.sendRedirect("tabtest/ttest.jsp");
             }
+            else{
+                response.sendRedirect("index.jsp");
+            }
         }
     }
 }

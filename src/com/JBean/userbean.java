@@ -30,7 +30,7 @@ public class userbean implements java.io.Serializable{
     }
     public void setUtype(int utype){ this.utype = utype;}
 
-    public userbean(int uid, String pwd, String uname, int utype){
+    public userbean(int uid, String uname, String pwd, int utype){
         super();
         this.uid = uid;
         this.uname = uname;
